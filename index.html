@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <title>Softly, With Love</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="fitria.jpg" />
+  </head>
+  <body>
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div id="ambient"></div>
+
+    <!-- SCENE 0 — INTRO / ENVELOPE -->
+    <section class="scene active" id="scene0">
+      <div class="card envelope-card">
+        <div
+          class="envelope-wrap"
+          id="envelopeBtn"
+          role="button"
+          tabindex="0"
+          aria-label="Buka surat"
+        >
+          <img class="envelope-photo" src="fitria.jpg" alt="Foto Fitria" />
+          <div class="envelope-glow"></div>
+        </div>
+        <p class="eyebrow" style="margin-top: 26px">Ada surat untukmu</p>
+        <h1 class="title" style="font-size: 1.4rem">
+          Fitria, ini buat kamu 🤍
+        </h1>
+        <p class="hint">Sentuh Foto Kamu untuk membuka</p>
+      </div>
+    </section>
+
+    <!-- SCENE 1 -->
+    <section class="scene" id="scene1">
+      <div class="card">
+        <div class="eyebrow">Sebuah surat kecil</div>
+        <h1 class="title">🤍 Untuk Fitria, Sayangku</h1>
+        <p class="subtitle">
+          Sebuah surat kecil dari cowok kamu yang selalu ingin melihatmu
+          tersenyum.
+        </p>
+        <div class="letter" id="letter1"></div>
+        <div class="btn-row">
+          <button class="btn" id="toScene2">Lanjut 🤍</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 2 -->
+    <section class="scene" id="scene2">
+      <div class="card">
+        <div class="eyebrow">Untuk kamu, selalu</div>
+        <h1 class="title">🤍 Aku Percaya Sama Kamu</h1>
+        <div class="letter" id="letter2"></div>
+
+        <div class="btn-row">
+          <button class="btn" id="hugBtn">🤍 Peluk Virtual</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="days-block">
+          <div class="days-label">⏳ Hari Bersama</div>
+          <div class="days-number" id="daysCount">0</div>
+          <div class="days-sub" id="daysSince"></div>
+        </div>
+
+        <div class="footer-note">
+          Selama masih ada aku, kamu nggak akan menghadapi semuanya sendirian.
+          Terima kasih sudah bertahan. Love you always, Fitria. ❤️🤍
+        </div>
+
+        <div class="btn-row">
+          <button class="btn show" id="toScene3">Balas Surat Ini 🤍</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 3 — KIRIM BALASAN -->
+    <section class="scene" id="scene3">
+      <div class="card">
+        <div class="eyebrow">Untuk aku baca nanti</div>
+        <h1 class="title">🤍 Tulis Balasanmu</h1>
+        <p class="subtitle">
+          Ceritain apa aja yang ada di hatimu, aku akan baca semuanya.
+        </p>
+
+        <div class="reply-block">
+          <textarea
+            id="replyText"
+            class="reply-textarea"
+            placeholder="Tulis balasanmu untuk aku di sini..."
+            rows="6"
+          ></textarea>
+          <div class="btn-row">
+            <button class="btn btn-pink-ocean" id="sendReplyBtn">
+              Kirim Balasan 🤍
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="hug-popup" id="hugPopup">
+      <div class="hug-card">
+        <p>
+          Peluk paling hangat buat Fitria 🤍 Semoga hari ini hatimu terasa
+          sedikit lebih ringan. Aku selalu ada buat kamu. ❤️
+        </p>
+        <div class="btn-row" style="margin-top: 22px">
+          <button class="btn" id="closeHug">Tutup</button>
+        </div>
+      </div>
+    </div>
+
+    <audio id="bgMusic" loop preload="auto">
+      <source src="audio.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="main.js"></script>
+  </body>
+</html>
